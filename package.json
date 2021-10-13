@@ -1,0 +1,50 @@
+{
+  "name": "gulp-boilerplate-wordpress",
+  "version": "1.0.0",
+  "description": "Boilerplate for development themes wordpress build with gulp",
+  "main": "index.js",
+  "repository": "https://github.com/lzhudson/wordpress-boilerplate-with-gulp",
+  "author": "Hudson Holanda <hudsonholanda55@gmail.com> (https://lzhudson.github.io/)",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/register": "^7.13.8",
+    "@wordpress/eslint-plugin": "^8.0.2",
+    "autoprefixer": "^10.2.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-zip": "^5.0.2",
+    "postcss": "^8.2.6",
+    "prettier": "^2.2.1",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^6.1.2",
+    "yargs": "^16.2.0"
+  },
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build --prod=true"
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 2%",
+    "IE 11"
+  ]
+}
