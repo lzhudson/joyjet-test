@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  border-radius: 4.8px;
+  font-weight: 600;
+  text-decoration: none;
+  &--small {
+    padding: 12px 42px;
+  }
+  &--blue {
+    background: $havelockBlue;
+    color: $white;
+  }
+}
