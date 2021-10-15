@@ -42,6 +42,103 @@ include 'inc/variables.php';
       </div>
     </div>
   </section>
+  <section class="blog">
+    <div class="blog__container">
+      <div class="blog__slider-container">
+        <div class="blog__slider">
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+          <div class="blog__slider-item">
+            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <div class="blog__slider-content">
+              <h2 class="blog__slider-title">International Space Station</h2>
+              <p class="blog__slider-resume">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+              </p>
+            </div>
+          </div>
+        </div>
+        <button aria-label="Previous" class="glider-prev">
+          <img src="<?php echo $pathToImages . 'arrow-left.svg'; ?>" alt="">
+        </button>
+        <button aria-label="Next" class="glider-next">
+          <img src="<?php echo $pathToImages . 'arrow-right.svg'; ?>" alt="">
+        </button>
+        <div role="tablist" class="dots"></div>
+      </div>
+
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>
