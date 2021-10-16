@@ -26,7 +26,7 @@
       <nav class="header__nav">
         <ul class="header__menu">
           <li class="header__menu-item">
-            <a href="" class="header__menu-link">Home</a>
+            <a href="#blog" class="header__menu-link">Blog</a>
           </li>
           <li class="header__menu-item">
             <a href="" class="header__menu-link">Popular</a>
@@ -35,7 +35,7 @@
             <a href="" class="header__menu-link">Archive</a>
           </li>
           <li class="header__menu-item">
-            <a href="" class="header__menu-link">About</a>
+            <a href="#about" class="header__menu-link">About</a>
           </li>
         </ul>
       </nav>

@@ -42,7 +42,7 @@ include 'inc/variables.php';
       </div>
     </div>
   </section>
-  <section class="blog">
+  <section id="blog" class="blog">
     <div class="blog__container">
       <div class="blog__slider-container">
         <div class="blog__slider">
@@ -139,7 +139,7 @@ include 'inc/variables.php';
 
     </div>
   </section>
-  <section class="about-us">
+  <section id="about" class="about-us">
     <div class="about-us__container">
       <img src="<?php echo $pathToImages . 'image-about-us.jpg'; ?>" alt="About JoyJet">
       <div class="about-us__content">
