@@ -40,10 +40,11 @@
     color: $fiord;
   }
   &__slider-resume {
-    color: #8C94A8;
+    color: #8c94a8;
     font-size: 16px;
   }
-  .glider-prev, .glider-next {
+  .glider-prev,
+  .glider-next {
     top: 50%;
     @media (max-width: 425px) {
       display: none;
@@ -68,5 +69,38 @@
   }
   .glider-dot.active {
     background: $havelockBlue;
+  }
+}
+
+.about-us {
+  margin-top: 95px;
+  &__container {
+    width: 100%;
+    max-width: calc(1165px + 48px);
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+    padding: 0 24px;
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 26px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    color: $havelockBlue;
+  }
+  &__text {
+    margin: 1rem 0 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #3e4d60;
   }
 }
