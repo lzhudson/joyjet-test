@@ -1,4 +1,6 @@
 .header {
+  transition: all 0.5s ease;
+  transform: translateY(-100%);
   @media (max-width: 425px) {
     &--menu-mobile {
       height: 100vh;
@@ -6,6 +8,20 @@
       position: fixed;
       background: $havelockBlue;
       z-index: 1;
+    }
+  }
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    transform: translateY(0%);
+    height: 96px;
+    background: #4A90E2;
+    z-index: 2;
+  }
+  &--fixed & {
+    &__container {
+      top: 0;
+      margin-top: 12.5px;
     }
   }
   &__container {
