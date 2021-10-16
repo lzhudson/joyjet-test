@@ -45,88 +45,31 @@ include 'inc/variables.php';
   <section id="blog" class="blog">
     <div class="blog__container">
       <div class="blog__slider-container">
+        <?php
+          $posts = get_posts(array(
+            'numberposts'      => -1,
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'post_type'        => 'post',
+          ));
+        ?>
         <div class="blog__slider">
+          <?php
+            foreach($posts as $post) :
+              $postTitle = $post->post_title;
+              $postContent = $post->post_content;
+              $postThumbnail = get_the_post_thumbnail_url($post->ID);
+          ?>
           <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
+            <img src="<?php echo $postThumbnail;?>" alt="<?php echo $postTitle;?>" class="blog__slider-image">
             <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
+              <h2 class="blog__slider-title"><?php echo $postTitle;?></h2>
               <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
+                <?php echo mb_strimwidth($postContent, 0, 88, '...');?>
               </p>
             </div>
           </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
-          <div class="blog__slider-item">
-            <img src="<?php echo $pathToImages . '43690.jpg'; ?>" alt="Blog Image" class="blog__slider-image">
-            <div class="blog__slider-content">
-              <h2 class="blog__slider-title">International Space Station</h2>
-              <p class="blog__slider-resume">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus aliquet sapien….
-              </p>
-            </div>
-          </div>
+          <?php endforeach;?>
         </div>
         <button aria-label="Previous" class="glider-prev">
           <img src="<?php echo $pathToImages . 'arrow-left.svg'; ?>" alt="">
