@@ -1,13 +1,16 @@
 .header {
   transition: all 0.5s ease;
   transform: translateY(-100%);
+  z-index: 2;
+  position: relative;
   @media (max-width: 425px) {
     &--menu-mobile {
-      height: 100vh;
+      height: 100vh !important;
       width: 100%;
       position: fixed;
       background: $havelockBlue;
       z-index: 1;
+      transform: translateY(0%);
     }
   }
   &--fixed {
@@ -68,6 +71,7 @@
     }
     &-item {
       margin-right: pxToRem(40);
+      cursor: pointer;
       &:last-child {
         margin-right: 0;
         @media (max-width: 425px) {
