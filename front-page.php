@@ -2,19 +2,47 @@
 include 'inc/variables.php';
 ?>
 <?php get_header(); ?>
+<?php
+  $groupSectionHero = get_field('section_group');
+  $imageHeroDesktop = $groupSectionHero['image_desktop'];
+  $imageHeroDesktopUrl = $imageHeroDesktop['url'];
+  $imageHeroMobile = $groupSectionHero['image_mobile'];
+  $imageHeroMobileUrl = $imageHeroMobile['url'];
+  $titleHero = $groupSectionHero['title'];
+  $titleHeroWithoutLastChar = substr($titleHero, 0, -1);
+  $titleHeroLastChar = substr($titleHero, -1);
+  $textHero = $groupSectionHero['text'];
+  $buttonHero = $groupSectionHero['button'];
+  $buttonHeroText = $buttonHero['text'];
+  $buttonHeroLink = $buttonHero['link'];
+  $trendingsToday = $groupSectionHero['trending_today'];
+?>
 
 <main>
+  <style>
+    .hero {
+      background: url(<?php echo $imageHeroDesktopUrl;?>) no-repeat center/cover;
+      height: 660px;
+    }
+    @media (max-width: 425px) {
+    .hero {
+      background: url(<?php echo $imageHeroMobileUrl;?>) no-repeat center/cover;
+      height: 420px;
+    }
+
+  }
+  </style>
   <section class="hero">
     <div class="hero__container">
       <div class="hero__content">
         <h1 class="hero__title">
-          SPACE<span class="highlight">.</span>
+          <?php echo $titleHeroWithoutLastChar;?><span class="highlight"><?php echo $titleHeroLastChar;?></span>
         </h1>
         <p class="hero__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie elit at lacus…
+          <?php echo $textHero;?>
         </p>
-        <a href="" class="hero__btn btn btn--small btn--blue">
-          click
+        <a href="<?php echo $buttonHeroLink;?>" class="hero__btn btn btn--small btn--blue">
+          <?php echo $buttonHeroText;?>
         </a>
       </div>
       <div class="hero__trending-today">
@@ -24,21 +52,16 @@ include 'inc/variables.php';
             <span class="highlight">Today</span>
           </p>
         </div>
+        <?php foreach($trendingsToday as $trending) : ?>
+        <?php
+          $textTrending = $trending['texto'];
+        ?>
         <div class="hero__trending-today-column">
           <p class="hero__trending-today-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor.
+            <?php echo $textTrending;?>
           </p>
         </div>
-        <div class="hero__trending-today-column">
-          <p class="hero__trending-today-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor.
-          </p>
-        </div>
-        <div class="hero__trending-today-column">
-          <p class="hero__trending-today-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor.
-          </p>
-        </div>
+        <?php endforeach;?>
       </div>
     </div>
   </section>
