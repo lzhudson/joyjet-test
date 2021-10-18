@@ -1,7 +1,13 @@
 .footer {
   margin-top: 60px;
   padding-bottom: 75px;
+  @media (max-width: 1024px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   @media (max-width: 425px) {
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 32px;
   }
   &__container  {
