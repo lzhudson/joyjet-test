@@ -46,7 +46,7 @@
   .glider-prev,
   .glider-next {
     top: 50%;
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -84,6 +84,9 @@
     @media (max-width: 425px) {
       flex-direction: column;
     }
+  }
+  &__image {
+    align-self: flex-start;
   }
   &__title {
     margin: 0;
