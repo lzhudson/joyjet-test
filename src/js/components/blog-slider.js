@@ -18,6 +18,7 @@ export default class BlogSlider {
         slidesToScroll: 1,
         draggable: false,
         dots: '.dots',
+        scrollLock: true,
         arrows: {
           prev: '.glider-prev',
           next: '.glider-next',
