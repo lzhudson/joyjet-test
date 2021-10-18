@@ -115,7 +115,7 @@ include 'inc/variables.php';
   ?>
   <section id="about" class="about-us">
     <div class="about-us__container">
-      <img src="<?php echo $imageAboutUrl; ?>" alt="<?php echo $imaegAboutAlt;?>">
+      <img class="about-us__image" src="<?php echo $imageAboutUrl; ?>" alt="<?php echo $imaegAboutAlt;?>">
       <div class="about-us__content">
         <h2 class="about-us__title"><?php echo $titleSectionAbout;?></h2>
         <p class="about-us__text">
